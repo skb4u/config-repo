@@ -3,7 +3,6 @@ spring:
     active: local
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:32773/contacts
     username: root
     password: admin
