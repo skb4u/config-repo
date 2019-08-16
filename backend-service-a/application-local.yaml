@@ -17,5 +17,11 @@ spring:
     username: guest
     password: guest
 
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: *
+
 backend-service-a:
   message: 'This is the message-2'
