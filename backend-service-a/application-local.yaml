@@ -7,4 +7,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:32773/contacts
     username: root
     password: admin
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
 
