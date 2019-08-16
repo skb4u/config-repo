@@ -11,7 +11,7 @@ spring:
     hibernate:
       use-new-id-generator-mappings: false
 
-  ka:
+  rabbitmq:
     host: localhost
     port: 15672
     username: guest
