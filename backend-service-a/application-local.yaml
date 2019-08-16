@@ -19,7 +19,7 @@ spring:
 
 management:
   endpoints:
-    jmx:
+    web:
       exposure:
         include: *
 
