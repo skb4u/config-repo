@@ -24,4 +24,4 @@ management:
         include: '*'
 
 backend-service-a:
-  message: 'This is the message-1'
+  message: 'This is the message-2'
