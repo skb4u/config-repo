@@ -20,7 +20,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: localhost:2181
+          brokers: localhost:9092
           auto-create-topics: true
 management:
   endpoints:
