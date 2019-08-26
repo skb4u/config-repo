@@ -1,0 +1,18 @@
+
+spring:
+  datasource:
+    username: ${vcap.services.oracleservice.credentials.username}
+    url: ${vcap.services.oracleservice.credentials.url}
+    password: ${vcap.services.oracleservice.credentials.password}
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+
+server:
+  port: 8889
+eureka:
+  instance:
+    non-secure-port: 80
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eurekaservice.credentials.uri}/eureka/
