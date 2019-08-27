@@ -6,7 +6,15 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     show-sql: true
+  cloud:
+    discovery:
+      enabled: true
 
 
 
-
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
