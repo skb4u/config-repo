@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     username: ${vcap.services.oracleservice.credentials.username}
