@@ -6,9 +6,13 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     show-sql: true
+  cloud:
+    config:
+      discovery:
+        enabled: true
 
 server:
-  port: 8889
+  port: 8081
 eureka:
   instance:
     non-secure-port: 80
