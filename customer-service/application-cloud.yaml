@@ -6,10 +6,7 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     show-sql: true
-  cloud:
-    config:
-      discovery:
-        enabled: true
+
 
 server:
   port: 8081
