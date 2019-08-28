@@ -1,9 +1,9 @@
+
 spring:
   datasource:
-    username: ${vcap.services.oracleservice.credentials.username}
-    url: ${vcap.services.oracleservice.credentials.url}
-    password: ${vcap.services.oracleservice.credentials.password}
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: ${vcap.services.mysql-sk.credentials.username}
+    url: ${vcap.services.mysql-sk.credentials.url}
+    password: ${vcap.services.mysql-sk.credentials.password}
   jpa:
     show-sql: true
 
@@ -12,10 +12,9 @@ server:
   port: 0
 eureka:
   instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${vcap.application.instance_id:${random.value}}
     hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
+    non-secure-port: 80
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${random.value}}
 
 ---
 eureka:
@@ -27,3 +26,5 @@ spring:
   cloud:
     config:
       uri: http://configDownload
+      discovery:
+        service-id: CONFIGSERVER-SK
