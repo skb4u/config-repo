@@ -25,6 +25,5 @@ eureka:
 spring:
   cloud:
     config:
-      uri: http://configDownload
       discovery:
         service-id: CONFIGSERVER-SK
