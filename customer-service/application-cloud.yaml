@@ -9,10 +9,21 @@ spring:
 
 
 server:
-  port: 8081
+  port: 0
 eureka:
   instance:
-    non-secure-port: 80
+    metadataMap:
+      instanceId: ${spring.application.name}:${vcap.application.instance_id:${random.value}}
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+
+---
+eureka:
   client:
     service-url:
       defaultZone: ${vcap.services.eurekaservice.credentials.uri}/eureka/
+---
+spring:
+  cloud:
+    config:
+      uri: http://configDownload
