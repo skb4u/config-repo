@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIGSERVER-SK
+
+---
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri:  lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/customer/**
+          filters:
+            - RewritePath=/customer/(?<segment>.*), /$\{segment}
