@@ -10,9 +10,9 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: customer-service-sk
-          uri:  lb://CUSTOMER-SERVICE-SK
+        - id: customer-service
+          uri:  lb://CUSTOMER-SERVICE
           predicates:
-            - Path= /customer/**
+            - Path=/customer/**
           filters:
             - RewritePath=/customer/(?<segment>.*), /$\{segment}
