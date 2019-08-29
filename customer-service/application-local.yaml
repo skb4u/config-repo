@@ -1,16 +1,17 @@
 spring:
   datasource:
-    username: sysadmin
-    url: jdbc:oracle:thin:@database-1.cidyhuetr9q6.us-east-2.rds.amazonaws.com:1521:ORCL
-    password: pDUslVoaO7v2cbdNF6wW
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: b1f01b9cf59412
+    url: jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/ad_fffabff6d0e3adf
+    password: bffa801d
 
   jpa:
     show-sql: true
   cloud:
     config:
+
       discovery:
         enabled: true
+        service-id:
 
 
 
