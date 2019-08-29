@@ -6,17 +6,12 @@ spring:
 
   jpa:
     show-sql: true
-  cloud:
-    config:
 
-      discovery:
-        enabled: true
-        service-id:
 
 
 
 server:
-  port: 8081
+  port: 0
 eureka:
   client:
     serviceUrl:
