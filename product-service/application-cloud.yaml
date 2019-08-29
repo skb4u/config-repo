@@ -1,9 +1,9 @@
-
 spring:
   datasource:
-    username: ${vcap.services.mysql-sk.credentials.username}
-    url: ${vcap.services.mysql-sk.credentials.url}
-    password: ${vcap.services.mysql-sk.credentials.password}
+    username: ${vcap.services.kkkkk.credentials.username}
+    url: ${vcap.services.kkkkk.credentials.jdbcUrl}
+    password: ${vcap.services.kkkkk.credentials.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
 
