@@ -6,8 +6,12 @@ spring:
 
   jpa:
     show-sql: true
-
-
+---
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIGSERVER-SK
 
 
 server:
