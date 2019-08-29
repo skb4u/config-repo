@@ -13,4 +13,4 @@ spring:
         - id: customer-service-sk
           uri:  lb://CUSTOMER-SERVICE-SK
           predicates:
-            - Path: /customer/**
+            - Path: /customer/
