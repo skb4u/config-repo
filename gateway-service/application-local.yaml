@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIGSERVER-SK
+
+---
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service-sk
+          uri:  lb://CUSTOMER-SERVICE-SK
+          predicates:
+            - Path: /customer/**
