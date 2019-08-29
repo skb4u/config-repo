@@ -1,0 +1,29 @@
+
+spring:
+  datasource:
+    username: ${vcap.services.mysql-sk.credentials.username}
+    url: ${vcap.services.mysql-sk.credentials.url}
+    password: ${vcap.services.mysql-sk.credentials.password}
+  jpa:
+    show-sql: true
+
+
+server:
+  port: 0
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    non-secure-port: 80
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${random.value}}
+
+---
+eureka:
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eurekaservice.credentials.uri}/eureka/
+---
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIGSERVER-SK

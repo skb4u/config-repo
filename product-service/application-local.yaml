@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: sysadmin
+    url: jdbc:oracle:thin:@database-1.cidyhuetr9q6.us-east-2.rds.amazonaws.com:1521:ORCL
+    password: pDUslVoaO7v2cbdNF6wW
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+  jpa:
+    show-sql: true
+  cloud:
+    config:
+      discovery:
+        enabled: true
+
+
+
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
