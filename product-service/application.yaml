@@ -1,1 +1,6 @@
 
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://127.0.0.1:32769/contacts
+    password: admin
